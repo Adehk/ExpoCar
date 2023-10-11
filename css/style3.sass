@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap')
+
+*
+  box-sizing: border-box
+  margin: 0
+  padding: 0
+
+a
+  color: inherit
+  text-decoration: none
+
+ul
+  list-style-type: none
+
+body
+  color: #fff
+  font-family: 'Inter', sans-serif
+  background-color: #000
+
+.header
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  z-index: 999
+  display: flex
+  align-items: center
+  justify-content: space-between
+  height: 92px
+  padding: 16px 40px
+  border-bottom: 1px solid #292929
+  background: #101010
+
+.logo
+  display: flex
+  gap: 12px
+
+.nav
+  display: flex
+  gap: 70px
+  align-items: center
+
+.menu
+  display: flex
+  gap: 28px
+  &__link
+    font-size: 18px
+    font-weight: 400
+
+.account
+  display: flex
+  gap: 28px
+  align-items: center
+  margin-left: auto
+  &__notification
+    position: relative
+  &__notificationDot
+    position: absolute
+    top: -1px
+    left: 12px
+  &__inner
+    display: flex
+    align-items: center
+    gap: 16px
+  &__profilePicture
+    width: 40px
+    height: 40px
+    img
+      width: 100%
+      height: 100%
+      border-radius: 50%
+  &__userName
+    font-weight: 500
+    line-height: 20px
+  &__userLicenseId
+    color: #969FA3
+    font-size: 13px
+
+.headerSelect
+  -webkit-appearance: none
+  -moz-appearance: none
+  appearance: none
+  width: 45px
+  color: #B6B6B6
+  font-family: 'Inter', sans-serif
+  font-size: 16px
+  font-weight: 400
+  background: #101010
+  border: none
+  cursor: pointer
+  background-image: url('../images/dropdown.svg')
+  background-repeat: no-repeat
+  background-position: 115% 50%
+  outline: none
+  &::-ms-expand
+    display: none
+
+.sidebar
+  position: fixed
+  top: 92px
+  left: 0
+  bottom: 0
+  z-index: 999
+  width: 272px
+  padding-top: 80px
+  border-right: 1px solid #292929
+  background: #101010
+  &__link
+    display: flex
+    align-items: center
+    gap: 12px
+    padding: 16px 40px
+    font-size: 18px
+    &_active
+      color: #66f
+    &_margin
+      margin-top: 108px
+  &__icon
+    fill: #fff
+    stroke: #fff
+    &_active
+      fill: #66f
+      stroke: #66f
+      
