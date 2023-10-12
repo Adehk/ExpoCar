@@ -34,6 +34,11 @@ body {
   border-bottom: 1px solid #292929;
   background: #101010;
 }
+@media (max-width: 1200px) {
+  .header {
+    display: none;
+  }
+}
 
 .logo {
   display: flex;
@@ -61,6 +66,11 @@ body {
   align-items: center;
   margin-left: auto;
 }
+@media (max-width: 767px) {
+  .account {
+    gap: 20px;
+  }
+}
 .account__notification {
   position: relative;
 }
@@ -77,6 +87,16 @@ body {
 .account__profilePicture {
   width: 40px;
   height: 40px;
+}
+@media (max-width: 1200px) {
+  .account__profilePicture {
+    margin-right: -30px;
+  }
+}
+@media (max-width: 767px) {
+  .account__profilePicture {
+    margin-right: -30px;
+  }
 }
 .account__profilePicture img {
   width: 100%;
@@ -113,6 +133,61 @@ body {
   display: none;
 }
 
+.headerMobile {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 82px;
+  border-bottom: 1px solid #242424;
+  background: #101010;
+  padding: 19px 48px;
+  z-index: 999;
+  display: none;
+}
+@media (max-width: 767px) {
+  .headerMobile {
+    height: 77px;
+    padding: 19px 24px;
+  }
+}
+.headerMobile__nav {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media (max-width: 1200px) {
+  .headerMobile {
+    display: block;
+  }
+}
+.headerMobile__logo {
+  display: flex;
+  gap: 12px;
+}
+@media (max-width: 767px) {
+  .headerMobile__logo {
+    gap: 8px;
+  }
+}
+.headerMobile__firstImg {
+  width: 28px;
+}
+@media (max-width: 767px) {
+  .headerMobile__firstImg {
+    width: 18px;
+  }
+}
+.headerMobile__secondImg {
+  width: 164px;
+}
+@media (max-width: 767px) {
+  .headerMobile__secondImg {
+    width: 108px;
+  }
+}
+
 .sidebar {
   position: fixed;
   top: 92px;
@@ -123,6 +198,11 @@ body {
   padding-top: 80px;
   border-right: 1px solid #292929;
   background: #101010;
+}
+@media (max-width: 1200px) {
+  .sidebar {
+    display: none;
+  }
 }
 .sidebar__link {
   display: flex;
@@ -146,11 +226,76 @@ body {
   stroke: #66f;
 }
 
+.sidebarMobile {
+  display: none;
+}
+@media (max-width: 1200px) {
+  .sidebarMobile {
+    display: block;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 66px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #101010;
+    padding: 0 48px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    z-index: 999;
+  }
+  .sidebarMobile__icon {
+    fill: #fff;
+    stroke: #fff;
+  }
+  .sidebarMobile__icon_active {
+    fill: #66f;
+    stroke: #66f;
+  }
+}
+@media (max-width: 767px) {
+  .sidebarMobile {
+    display: block;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #101010;
+    padding: 0 24px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    z-index: 999;
+  }
+  .sidebarMobile__icon {
+    fill: #fff;
+  }
+  .sidebarMobile__icon_active {
+    fill: #66f;
+  }
+}
+
 .chat {
   margin: 124px 32px 32px 305px;
   display: grid;
   grid-template-columns: 1.2fr 2fr;
   grid-template-rows: 92px 1fr;
+}
+@media (max-width: 1200px) {
+  .chat {
+    margin: 102px 48px 0;
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 767px) {
+  .chat {
+    margin: 77px 0 56px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 77px 1fr;
+  }
 }
 .chat__leftCol {
   display: flex;
@@ -158,10 +303,23 @@ body {
   padding: 24px 20px;
   font-size: 24px;
   font-weight: 600;
-  border-bottom: 1px solid #292929;
   border-right: 1px solid #292929;
+  border-bottom: 1px solid #292929;
   background: #101010;
   border-top-left-radius: 20px;
+}
+@media (max-width: 1200px) {
+  .chat__leftCol {
+    border-top-right-radius: 20px;
+    border-right: 0;
+  }
+}
+@media (max-width: 767px) {
+  .chat__leftCol {
+    border-radius: 0;
+    padding: 20px 16px;
+    font-size: 20px;
+  }
 }
 .chat__rightCol {
   display: flex;
@@ -170,6 +328,11 @@ body {
   border-bottom: 1px solid #292929;
   background: #101010;
   border-top-right-radius: 20px;
+}
+@media (max-width: 1200px) {
+  .chat__rightCol {
+    display: none;
+  }
 }
 .chat__user {
   display: flex;
@@ -195,6 +358,21 @@ body {
 .chat__status {
   color: #969FA3;
   line-height: 24px;
+  width: 100%;
+  max-width: 252px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+@media (max-width: 1200px) {
+  .chat__status {
+    max-width: 478px;
+  }
+}
+@media (max-width: 767px) {
+  .chat__status {
+    max-width: 228px;
+  }
 }
 .chat__status_purple-cl {
   color: #66f;
@@ -207,9 +385,25 @@ body {
   border-right: 1px solid #292929;
   background: #101010;
 }
+@media (max-width: 1200px) {
+  .chat__chats {
+    border-bottom-right-radius: 20px;
+    border: none;
+  }
+}
+@media (max-width: 767px) {
+  .chat__chats {
+    border-radius: 0;
+  }
+}
 .chat__chatRoom {
   border-bottom-right-radius: 20px;
   background: #101010;
+}
+@media (max-width: 1200px) {
+  .chat__chatRoom {
+    display: none;
+  }
 }
 .chat__userRow {
   display: flex;
@@ -217,9 +411,21 @@ body {
   gap: 16px;
   padding: 16px 20px;
 }
+@media (max-width: 767px) {
+  .chat__userRow {
+    gap: 13px;
+    padding: 13px 16px;
+  }
+}
 .chat__userProfilePicture {
   width: 60px;
   height: 60px;
+}
+@media (max-width: 767px) {
+  .chat__userProfilePicture {
+    width: 50px;
+    height: 50px;
+  }
 }
 .chat__userProfilePicture img {
   width: 100%;
@@ -252,6 +458,7 @@ body {
 }
 .chat__notification {
   display: flex;
+  gap: 8px;
   align-items: center;
   justify-content: center;
   font-size: 14px;
@@ -259,6 +466,14 @@ body {
   height: 20px;
   border-radius: 50%;
   background: #66F;
+}
+@media (max-width: 767px) {
+  .chat__notification {
+    gap: 6px;
+    font-size: 11px;
+    width: 16px;
+    height: 16px;
+  }
 }
 .chat__chatRoom {
   padding: 48px 20px 20px;
@@ -318,6 +533,7 @@ body {
   padding: 16px 24px;
   border-radius: 12px;
   border: 1px solid #292929;
+  background: #101010;
   flex-grow: 1;
 }
 .textbox input {

@@ -409,7 +409,7 @@ body {
   justify-content: center;
 }
 .product__img {
-  width: 434px;
+  max-width: 434px;
   height: 288px;
 }
 @media (max-width: 767px) {
