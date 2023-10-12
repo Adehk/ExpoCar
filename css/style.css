@@ -34,7 +34,7 @@ body {
   border-bottom: 1px solid #292929;
   background: #101010;
 }
-@media (max-width: 1999px) {
+@media (max-width: 1200px) {
   .header {
     display: none;
   }
@@ -88,7 +88,7 @@ body {
   width: 40px;
   height: 40px;
 }
-@media (max-width: 1999px) {
+@media (max-width: 1200px) {
   .account__profilePicture {
     margin-right: -30px;
   }
@@ -157,7 +157,7 @@ body {
   align-items: center;
   justify-content: space-between;
 }
-@media (max-width: 1999px) {
+@media (max-width: 1200px) {
   .headerMobile {
     display: block;
   }
@@ -199,7 +199,7 @@ body {
   border-right: 1px solid #292929;
   background: #101010;
 }
-@media (max-width: 1999px) {
+@media (max-width: 1200px) {
   .sidebar {
     display: none;
   }
@@ -227,7 +227,7 @@ body {
 .sidebarMobile {
   display: none;
 }
-@media (max-width: 1999px) {
+@media (max-width: 1200px) {
   .sidebarMobile {
     display: block;
     position: fixed;
@@ -283,7 +283,7 @@ body {
   row-gap: 34px;
   margin: 124px 32px 32px 304px;
 }
-@media (max-width: 1999px) {
+@media (max-width: 1200px) {
   .main {
     margin: 0;
     grid-template-columns: 1fr;
@@ -307,7 +307,7 @@ body {
   border-radius: 12px;
   background: #101010;
 }
-@media (max-width: 1999px) {
+@media (max-width: 1200px) {
   .product {
     grid-column: 1/2;
     grid-row: 1/2;
@@ -446,7 +446,7 @@ body {
   grid-column: 2/3;
   grid-row: 1/2;
 }
-@media (max-width: 1999px) {
+@media (max-width: 1200px) {
   .activity {
     grid-column: 1/2;
     grid-row: 2/3;
@@ -465,7 +465,7 @@ body {
   grid-column: 2/3;
   grid-row: 2/3;
 }
-@media (max-width: 1999px) {
+@media (max-width: 1200px) {
   .notiesAndAvailableSensors {
     grid-column: 1/2;
     grid-row: 3/4;
@@ -485,7 +485,7 @@ body {
   border-radius: 14px;
   width: 308px;
 }
-@media (max-width: 1999px) {
+@media (max-width: 1200px) {
   .noties {
     width: 100%;
   }
@@ -565,7 +565,7 @@ body {
   background: #101010;
   width: 302px;
 }
-@media (max-width: 1999px) {
+@media (max-width: 1200px) {
   .availableSensors {
     width: 100%;
   }
@@ -650,7 +650,7 @@ body {
   grid-column: 2/3;
   grid-row: 3/4;
 }
-@media (max-width: 1999px) {
+@media (max-width: 1200px) {
   .reminder {
     grid-column: 1/2;
     grid-row: 4/5;
@@ -695,7 +695,7 @@ body {
   font-size: 14px;
   font-weight: 500;
 }
-@media (max-width: 1999px) {
+@media (max-width: 1200px) {
   .reminder__heading {
     font-size: 15px;
   }
@@ -731,7 +731,7 @@ body {
   font-size: 13px;
   font-weight: 500;
 }
-@media (max-width: 1999px) {
+@media (max-width: 1200px) {
   .reminder__info {
     font-size: 14px;
   }

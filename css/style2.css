@@ -34,7 +34,7 @@ body {
   border-bottom: 1px solid #292929;
   background: #101010;
 }
-@media (max-width: 1999px) {
+@media (max-width: 1200px) {
   .header {
     display: none;
   }
@@ -88,7 +88,7 @@ body {
   width: 40px;
   height: 40px;
 }
-@media (max-width: 1999px) {
+@media (max-width: 1200px) {
   .account__profilePicture {
     margin-right: -30px;
   }
@@ -137,16 +137,21 @@ body {
 }
 
 .headerMobile {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 82px;
-  border-bottom: 1px solid #242424;
-  background: #101010;
-  padding: 19px 48px;
-  z-index: 999;
   display: none;
+}
+@media (max-width: 1200px) {
+  .headerMobile {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 82px;
+    border-bottom: 1px solid #242424;
+    background: #101010;
+    padding: 19px 48px;
+    z-index: 999;
+  }
 }
 @media (max-width: 767px) {
   .headerMobile {
@@ -160,14 +165,19 @@ body {
   align-items: center;
   justify-content: space-between;
 }
-@media (max-width: 1999px) {
+@media (max-width: 1200px) {
   .headerMobile {
     display: block;
   }
 }
 .headerMobile__logo {
   display: flex;
-  gap: 8px;
+  gap: 12px;
+}
+@media (max-width: 767px) {
+  .headerMobile__logo {
+    gap: 8px;
+  }
 }
 .headerMobile__firstImg {
   width: 28px;
@@ -179,6 +189,11 @@ body {
 }
 .headerMobile__secondImg {
   width: 164px;
+}
+@media (max-width: 767px) {
+  .headerMobile__secondImg {
+    width: 108px;
+  }
 }
 
 .sidebar {
@@ -192,7 +207,7 @@ body {
   border-right: 1px solid #292929;
   background: #101010;
 }
-@media (max-width: 1999px) {
+@media (max-width: 1200px) {
   .sidebar {
     display: none;
   }
@@ -220,7 +235,7 @@ body {
 .sidebarMobile {
   display: none;
 }
-@media (max-width: 1999px) {
+@media (max-width: 1200px) {
   .sidebarMobile {
     display: block;
     position: fixed;
@@ -330,7 +345,7 @@ body {
   margin: 124px 32px 32px 304px;
   max-width: 1104px;
 }
-@media (max-width: 1999px) {
+@media (max-width: 1200px) {
   .myCars {
     margin: 0;
     padding: 114px 48px 0;
@@ -346,7 +361,7 @@ body {
   font-size: 30px;
   font-weight: 600;
 }
-@media (max-width: 1999px) {
+@media (max-width: 1200px) {
   .myCars__title {
     margin-bottom: 36px;
   }
@@ -365,7 +380,7 @@ body {
        column-gap: 24px;
   row-gap: 28px;
 }
-@media (max-width: 1999px) {
+@media (max-width: 1200px) {
   .carCatalog {
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
@@ -394,7 +409,7 @@ body {
 .carCard_hidden {
   display: none;
 }
-@media (max-width: 1999px) {
+@media (max-width: 1200px) {
   .carCard_hidden {
     display: block;
   }
