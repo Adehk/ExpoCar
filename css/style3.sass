@@ -212,10 +212,11 @@ body
   margin: 124px 32px 32px 305px
   display: grid
   grid-template-columns: 1.2fr 2fr
-  grid-template-rows: 92px 1fr
+  grid-template-rows: 92px 776px
   @media (max-width: 1200px)
-    margin: 102px 48px 0
+    margin: 102px 48px 66px
     grid-template-columns: 1fr
+    grid-template-rows: 92 1fr
   @media (max-width: 767px)
     margin: 77px 0 56px
     grid-template-columns: 1fr
@@ -283,11 +284,15 @@ body
     border-bottom-left-radius: 20px
     border-right: 1px solid #292929
     background: #101010
+    overflow-y: scroll
+    &::-webkit-scrollbar
+      display: none
     @media (max-width: 1200px)
       border-bottom-right-radius: 20px
       border: none
     @media (max-width: 767px)
       border-radius: 0
+      overflow-y: hidden
   &__chatRoom
     border-bottom-right-radius: 20px
     background: #101010
@@ -347,6 +352,10 @@ body
       height: 16px
   &__chatRoom
     padding: 48px 20px 20px
+    position: relative
+    overflow-y: scroll
+    &::-webkit-scrollbar
+      display: none
   &__date
     color: #575757
     text-align: center
@@ -384,7 +393,15 @@ body
 .form
   display: flex
   gap: 12px
-  margin-top: 96px
+  margin-top: 32px
+  background: #101010
+  padding-top: 5px
+  padding-bottom: 20px
+  position: sticky
+  bottom: -20px
+  left: 0
+  right: 0
+  z-index: 999
 
 .textbox
   display: flex
