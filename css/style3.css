@@ -567,6 +567,9 @@ body {
 .textbox input:focus {
   outline: none;
 }
+.textbox__paperClipIcon {
+  cursor: pointer;
+}
 
 .submitBtn {
   display: flex;
@@ -580,4 +583,8 @@ body {
   font-family: "Inter", sans-serif;
   font-size: 18px;
   cursor: pointer;
+  transition: 0.15s;
+}
+.submitBtn:hover {
+  background: #5353E8;
 }/*# sourceMappingURL=style3.css.map */

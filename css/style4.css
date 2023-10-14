@@ -370,7 +370,7 @@ body {
   cursor: pointer;
 }
 
-.secondary_btn {
+.secondaryBtn {
   color: #66F;
   line-height: 24px;
   padding: 12px 24px;
@@ -379,19 +379,19 @@ body {
   white-space: nowrap;
   transition: 0.15s;
 }
-.secondary_btn_hidden {
+.secondaryBtn_hidden {
   display: block;
 }
 @media (max-width: 767px) {
-  .secondary_btn_hidden {
+  .secondaryBtn_hidden {
     display: none;
   }
 }
-.secondary_btn:hover {
+.secondaryBtn:hover {
   border: 1px solid #5353E8;
   background: rgba(83, 83, 232, 0.1);
 }
-.secondary_btn_lg {
+.secondaryBtn_lg {
   padding: 16px 32px;
 }
 

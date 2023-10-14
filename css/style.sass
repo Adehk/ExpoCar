@@ -161,9 +161,9 @@ body
     &_margin
       margin-top: 108px
   &__icon
-      fill: #fff
-      &_active
-        fill: #66f
+    fill: #fff
+    &_active
+      fill: #66f
 
 .sidebarMobile
   display: none
@@ -443,6 +443,9 @@ body
     border-radius: 5px
     background: #FF6370
     padding: 10px 12px
+    transition: 0.15s
+    &:hover
+      background-color: darken(#FF6370, 3%)
 
 .checkboxes
   display: flex
@@ -494,6 +497,9 @@ body
     padding: 6px 12px
     border-radius: 6px
     cursor: pointer
+    transition: 0.15s
+    &:hover
+      background: #5353E8
   &__secondRow
     display: flex
     align-items: center

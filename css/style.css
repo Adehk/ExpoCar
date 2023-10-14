@@ -612,6 +612,10 @@ body {
   border-radius: 5px;
   background: #FF6370;
   padding: 10px 12px;
+  transition: 0.15s;
+}
+.availableSensors__link:hover {
+  background-color: #ff5462;
 }
 
 .checkboxes {
@@ -676,6 +680,10 @@ body {
   padding: 6px 12px;
   border-radius: 6px;
   cursor: pointer;
+  transition: 0.15s;
+}
+.reminder__btn:hover {
+  background: #5353E8;
 }
 .reminder__secondRow {
   display: flex;
