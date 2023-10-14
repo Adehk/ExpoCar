@@ -227,12 +227,12 @@ body {
   font-size: 18px;
   line-height: 28px;
 }
-.registration__signUpLink {
+.registration__link {
   text-align: center;
   color: #9A9A9A;
   margin-top: -8px;
 }
-.registration__signUpLink a {
+.registration__link a {
   color: #66f;
 }
 
@@ -260,7 +260,7 @@ body {
   color: #fff;
 }
 .inputbox input {
-  background-color: #0B0B0B;
+  background-color: #000;
   border: 1px solid #828282;
   border-radius: 12px;
   padding: 16px 24px;
