@@ -331,6 +331,13 @@ body {
   transition: opacity 200ms ease-in-out;
   opacity: 0;
 }
+@media (max-width: 767px) {
+  .checkbox input + label:after {
+    width: 24px;
+    height: 24px;
+    top: 16px;
+  }
+}
 .checkbox input:hover {
   color: #333;
 }

@@ -460,15 +460,65 @@ body
 
 .checkbox
   display: flex
-  gap: 10px
-  font-size: 13px
-  font-weight: 500
+  align-items: center
+  justify-content: space-between
+  position: relative
+  margin-top: -8px
+  margin-bottom: 8px
   &_active
     color: #ff6370
   &__icon
     fill: #a4a5a6
     &_active
       fill: #ff6370
+  input
+    position: absolute
+    opacity: 0
+    & + label
+      display: inline-block
+      position: relative
+      padding-left: 30px
+      padding-top: 2px
+      color: #828282
+      font-size: 13px
+      font-weight: 500
+      cursor: pointer
+      &:before
+        position: absolute
+        display: block
+        left: 0
+        top: 0
+        content: ""
+        background: transparent
+        width: 18px
+        height: 18px
+        box-shadow: inset 0 0 0 1px #333642
+        border-radius: 3px
+        transition: 200ms ease-in-out all
+      &:after
+        position: absolute
+        display: block
+        top: 15px
+        left: 4px
+        transform: translateY(-50%)
+        content: ""
+        background-image: url('../images/check.svg')
+        background-repeat: no-repeat
+        width: 18px
+        height: 18px
+        transition: opacity 200ms ease-in-out
+        opacity: 0
+    &:hover
+      color: #333
+    &:focus
+      outline: none
+    &:checked + label
+      color: #FF6370
+      &:before
+        background: #FF6370
+        box-shadow: none
+      &:after
+        opacity: 1
 
 .reminder
   background: #101010
