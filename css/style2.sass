@@ -272,7 +272,7 @@ body
 
 .carCatalog
   display: grid
-  grid-template-columns: repeat(3, 352px)
+  grid-template-columns: repeat(3, 1fr)
   column-gap: 24px
   row-gap: 28px
   @media (max-width: 1200px)
@@ -314,7 +314,7 @@ body
     display: flex
     justify-content: center
     img
-      width: 233px
+      max-width: 233px
       height: 123px
       object-fit: cover
     &_reversed

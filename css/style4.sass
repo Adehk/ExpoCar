@@ -164,7 +164,6 @@ body
     fill: #fff
     &_active
       fill: #66f
-      stroke: #66f
 
 .sidebarMobile
   display: none
@@ -186,7 +185,6 @@ body
       fill: #fff
       &_active
         fill: #66f
-        stroke: #66f
   @media (max-width: 767px)
     display: block
     position: fixed
@@ -206,231 +204,204 @@ body
       &_active
         fill: #66f
 
-.chat
-  margin: 124px 32px 32px 305px
-  display: grid
-  grid-template-columns: 1.2fr 2fr
-  grid-template-rows: 92px 776px
+.alert
+  display: flex
+  gap: 16px
+  align-items: center
+  justify-content: space-between
+  padding: 24px 32px
+  background: rgba(207, 186, 112, 0.04)
+  margin: 92px 0 80px 272px
   @media (max-width: 1200px)
-    margin: 102px 48px 66px
-    grid-template-columns: 1fr
-    grid-template-rows: 92 1fr
+    margin: 82px 0 44px
   @media (max-width: 767px)
-    margin: 77px 0 56px
-    grid-template-columns: 1fr
-    grid-template-rows: 77px 1fr
-  &__leftCol
+    margin: 77px 0 49px
+  &__text
     display: flex
     align-items: center
-    padding: 24px 20px
-    font-size: 24px
-    font-weight: 600
-    border-right: 1px solid #292929
-    border-bottom: 1px solid #292929
-    background: #101010
-    border-top-left-radius: 20px
-    @media (max-width: 1200px)
-      border-top-right-radius: 20px
-      border-right: 0
-    @media (max-width: 767px)
-      border-radius: 0
-      padding: 20px 16px
-      font-size: 20px
-  &__rightCol
-    display: flex
-    justify-content: space-between
-    padding: 15px 20px
-    border-bottom: 1px solid #292929
-    background: #101010
-    border-top-right-radius: 20px
-    @media (max-width: 1200px)
-      display: none
-  &__user
-    display: flex
     gap: 16px
+    span
+      color: #CFBA70
+  &__closeIcon
+    cursor: pointer
+
+.registration
+  margin: 0px 0px 32px 272px
+  @media (max-width: 1200px)
+    margin: 0 48px 198px
+  @media (max-width: 767px)
+    margin: 0 24px 96px
+  &__wrapper
+    max-width: 728px
+    margin: 0 auto
+  &__userRow
+    display: flex
     align-items: center
-  &__profilePicture
-    width: 60px
-    height: 60px
+    justify-content: space-between
+    margin-bottom: 48px
+  &__userInfo
+    display: flex
+    align-items: center
+    gap: 16px
+  &__userProfilePicture
+    width: 80px
+    height: 80px
     img
       width: 100%
       height: 100%
       object-fit: cover
       border-radius: 50%
+  &__userWrapper
+    display: flex
+    flex-direction: column
+    gap: 8px
   &__userName
-    font-size: 20px
-    font-weight: 500
-    line-height: 30px
+    font-size: 24px
+    font-weight: 600
+  &__verificationStatus
     display: flex
     align-items: center
-    gap: 8px
-  &__status
-    color: #969FA3
-    line-height: 24px
-    width: 100%
-    max-width: 252px
-    overflow: hidden
-    text-overflow: ellipsis
-    white-space: nowrap
-    @media (max-width: 1200px)
-      max-width: 478px
-    @media (max-width: 767px)
-      max-width: 228px
-    &_purple-cl
-      color: #66f
-  &__KebabMenu
-    cursor: pointer
-  &__chats
-    border-bottom-left-radius: 20px
-    border-right: 1px solid #292929
-    background: #101010
-    overflow-y: scroll
-    &::-webkit-scrollbar
-      display: none
-    @media (max-width: 1200px)
-      border-bottom-right-radius: 20px
-      border: none
-    @media (max-width: 767px)
-      border-radius: 0
-      overflow-y: hidden
-  &__chatRoom
-    border-bottom-right-radius: 20px
-    background: #101010
-    @media (max-width: 1200px)
-      display: none
-  &__userRow
-    display: flex
-    align-items: center
-    gap: 16px
-    padding: 16px 20px
-    @media (max-width: 767px)
-      gap: 13px
-      padding: 13px 16px
-  &__userProfilePicture
-    width: 60px
-    height: 60px
-    @media (max-width: 767px)
-      width: 50px
-      height: 50px
+    gap: 6px
+    padding: 8px 20px
+    border-radius: 20px
+    background: rgba(255, 212, 76, 0.10)
+    align-self: start
+    span
+      color: #FFD851
+      line-height: 24px
     img
-      width: 100%
-      border-radius: 50%
-  &__userInfoCol
-    width: 100%
-  &__userNameRow
-    display: flex
-    flex-grow: 1
-    justify-content: space-between
-  &__name
-    font-size: 20px
-    font-weight: 500
-    line-height: 30px
-    display: flex
-    align-items: center
-    gap: 8px
-  &__time
-    color: #969FA3
-    font-size: 14px
-  &__statusRow
-    display: flex
-    align-items: center
-    justify-content: space-between
-  &__notification
-    display: flex
-    gap: 8px
-    align-items: center
-    justify-content: center
-    font-size: 14px
-    width: 20px
-    height: 20px
-    border-radius: 50%
-    background: #66F
-    @media (max-width: 767px)
-      gap: 6px
-      font-size: 11px
-      width: 16px
-      height: 16px
-  &__chatRoom
-    padding: 48px 20px 20px
-    position: relative
-    overflow-y: scroll
-    &::-webkit-scrollbar
-      display: none
-  &__date
-    color: #575757
-    text-align: center
-    font-size: 14px
-    margin-bottom: 32px
-  &__messageWrapper
-    display: flex
-    flex-direction: column
-    gap: 32px
-  &__messageContainer
-    display: flex
-    gap: 12px
-    align-items: end
-    &_sent
-      justify-content: end
-  &__messageInner
-    display: flex
-    flex-direction: column
-    gap: 8px
-    padding: 12px 20px
-    border-radius: 20px 20px 20px 0px
-    background: #181818
-    width: 65%
-    &_sent
-      border-radius: 20px 20px 0px 20px
-  &__messageText
-    color: #969FA3
-    font-size: 18px
-    line-height: 28px
-  &__messageDeliveryTime
-    color: #575757
-    text-align: right
-    font-size: 14px
+      cursor: pointer
 
-.form
-  display: flex
-  gap: 12px
-  margin-top: 32px
-  background: #101010
-  padding-top: 5px
-  padding-bottom: 20px
-  position: sticky
-  bottom: -20px
-  left: 0
-  right: 0
-  z-index: 999
-
-.textbox
-  display: flex
-  align-items: center
-  gap: 8px
-  padding: 16px 24px
+.secondary_btn
+  color: #66F
+  line-height: 24px
+  padding: 12px 24px
   border-radius: 12px
-  border: 1px solid #292929
-  background: #101010
-  flex-grow: 1
+  border: 1px solid #66F
+  white-space: nowrap
+  transition: 0.15s
+  &_hidden
+    display: block
+    @media (max-width: 767px)
+     display: none
+  &:hover
+    border: 1px solid #5353E8
+    background: rgba(83, 83, 232, 0.10)
+  &_lg
+    padding: 16px 32px
+
+.formInner
+  display: flex
+  flex-direction: column
+  gap: 24px
+
+.inputbox
+  display: flex
+  flex-direction: column
+  gap: 12px
+  color: #828282
+  label:has(+ input:focus)
+    color: #fff
   input
-    color: #969FA3
-    font-family: 'Inter', sans-serif
+    background-color: #0B0B0B
+    border: 1px solid #828282
+    border-radius: 12px
+    padding: 16px 24px
+    color: #828282
     font-size: 18px
-    background: #101010
-    border: none
-    width: 100%
+    caret-color: #6666FF
     &:focus
       outline: none
+      border: 1px solid #6666FF
+    &:-webkit-autofill
+      -webkit-background-clip: text
+      -webkit-text-fill-color: #828282 !important
+    &::placeholder
+      font-size: 18px
 
-.submitBtn
+.verification
   display: flex
-  padding: 16px 32px
-  justify-content: center
   align-items: center
-  border-radius: 12px
-  border: none
-  background: #66F
-  color: #FFF
-  font-family: 'Inter', sans-serif
-  font-size: 18px
+  justify-content: space-between
+  gap: 40px
+  @media (max-width: 767px)
+    flex-direction: column
+    align-items: start
+  &__text
+    display: flex
+    flex-direction: column
+    gap: 8px
+    span
+      color: #5B5B5B
+      font-size: 20px
+      font-weight: 500
+    p
+      color: #828282
+      line-height: 24px
+
+.notification
+  display: flex
+  gap: 12px
+  margin-bottom: 8px
+  &__text
+    display: flex
+    flex-direction: column
+    gap: 8px
+    span
+      color: #333
+      font-size: 20px
+    p
+      color: #828282
+      line-height: 24px
+
+//Toggle-switch
+
+.toggleSwitchContainer
+  width: 40px
+
+.toggleSwitch
+  position: relative
+  display: inline-block
+  width: 36px
+  height: 20px
   cursor: pointer
+  input
+    display: none
+
+.slider
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  background-color: #70777A
+  border-radius: 70px
+  transition: 0.4s
+  &:before
+    position: absolute
+    content: ""
+    height: 12px
+    width: 12px
+    left: 4px
+    bottom: 4px
+    background-color: #fff
+    border-radius: 50%
+    transition: 0.4s
+
+  .toggleSwitch input:checked + &
+    background-color: #66F
+
+  .toggleSwitch input:checked + &:before
+    transform: translateX(16px)
+
+.primaryBtn
+  display: flex
+  align-items: center
+  justify-content: center
+  padding: 16px 32px
+  border-radius: 12px
+  background: #66F
+  font-size: 18px
+  transition: 0.15s
+  &:hover
+    background: #5353E8
