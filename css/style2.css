@@ -18,6 +18,7 @@ body {
   color: #fff;
   font-family: "Inter", sans-serif;
   background-color: #000;
+  position: relative;
 }
 
 .header {
@@ -470,4 +471,87 @@ body {
 .carCard__km {
   font-size: 18px;
   font-weight: 500;
+}
+
+.addCar {
+  position: absolute;
+  top: 3%;
+  left: 40%;
+  background: #101010;
+  border-radius: 16px;
+  padding: 32px;
+  width: 484px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+@media (max-width: 1200px) {
+  .addCar {
+    margin: 162px 0 280px;
+  }
+}
+@media (max-width: 767px) {
+  .addCar {
+    margin: 137px 0 370px;
+    padding: 0 24px;
+  }
+}
+.addCar__title {
+  font-size: 36px;
+  font-weight: 600;
+}
+
+.formInner {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.inputbox {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  color: #828282;
+}
+.inputbox label:has(+ input:focus) {
+  color: #fff;
+}
+.inputbox input {
+  background-color: #101010;
+  border: 1px solid #828282;
+  border-radius: 12px;
+  padding: 16px 24px;
+  color: #828282;
+  font-size: 18px;
+  caret-color: #6666FF;
+}
+.inputbox input:focus {
+  outline: none;
+  border: 1px solid #6666FF;
+}
+.inputbox input:-webkit-autofill {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: #828282 !important;
+}
+.inputbox input::-moz-placeholder {
+  font-size: 18px;
+}
+.inputbox input::placeholder {
+  font-size: 18px;
+}
+
+.primaryBtn {
+  color: #fff;
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  padding: 16px 32px;
+  background: #66F;
+  border: none;
+  border-radius: 12px;
+  transition: 0.15s;
+  margin-top: 34px;
+  cursor: pointer;
+}
+.primaryBtn:hover {
+  background: #5353E8;
 }/*# sourceMappingURL=style2.css.map */

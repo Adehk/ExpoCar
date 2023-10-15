@@ -16,6 +16,7 @@ body
   color: #fff
   font-family: 'Inter', sans-serif
   background-color: #000
+  position: relative
 
 .header
   position: fixed
@@ -342,3 +343,70 @@ body
   &__km
     font-size: 18px
     font-weight: 500
+
+.addCar
+  position: absolute
+  top: 3%
+  left: 40%
+  background: #101010
+  border-radius: 16px
+  padding: 32px
+  width: 484px
+  display: flex
+  flex-direction: column
+  gap: 32px
+  &_hidden
+    // display: none
+  @media (max-width: 1200px)
+    margin: 162px 0 280px
+  @media (max-width: 767px)
+    margin: 137px 0 370px
+    padding: 0 24px
+  &__title
+    font-size: 36px
+    font-weight: 600
+
+.addCarInner
+
+.formInner
+  display: flex
+  flex-direction: column
+  gap: 24px
+
+.inputbox
+  display: flex
+  flex-direction: column
+  gap: 12px
+  color: #828282
+  label:has(+ input:focus)
+    color: #fff
+  input
+    background-color: #101010
+    border: 1px solid #828282
+    border-radius: 12px
+    padding: 16px 24px
+    color: #828282
+    font-size: 18px
+    caret-color: #6666FF
+    &:focus
+      outline: none
+      border: 1px solid #6666FF
+    &:-webkit-autofill
+      -webkit-background-clip: text
+      -webkit-text-fill-color: #828282 !important
+    &::placeholder
+      font-size: 18px
+
+.primaryBtn
+  color: #fff
+  font-family: 'Inter', sans-serif
+  font-size: 18px
+  padding: 16px 32px
+  background: #66F
+  border: none
+  border-radius: 12px
+  transition: 0.15s
+  margin-top: 34px
+  cursor: pointer
+  &:hover
+    background: #5353E8
