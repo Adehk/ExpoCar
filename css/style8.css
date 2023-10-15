@@ -299,7 +299,6 @@ body {
   padding-top: 1px;
   color: #828282;
   line-height: 24px;
-  cursor: pointer;
 }
 .checkbox input + label a {
   color: #66F;
@@ -338,8 +337,11 @@ body {
     top: 16px;
   }
 }
-.checkbox input:hover {
-  color: #333;
+.checkbox input:hover + label:before {
+  cursor: pointer;
+}
+.checkbox input:hover + label:after {
+  cursor: pointer;
 }
 .checkbox input:focus {
   outline: none;
@@ -350,6 +352,11 @@ body {
 }
 .checkbox input:checked + label:after {
   opacity: 1;
+}
+@media (max-width: 767px) {
+  .checkbox label {
+    padding-top: -8px;
+  }
 }
 
 .primaryBtn {

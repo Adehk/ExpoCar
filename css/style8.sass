@@ -223,7 +223,6 @@ body
       padding-top: 1px
       color: #828282
       line-height: 24px
-      cursor: pointer
       a
         color: #66F
       &:before
@@ -255,17 +254,21 @@ body
           width: 24px
           height: 24px
           top: 16px
-    &:hover
-      color: #333
+    &:hover + label:before
+      cursor: pointer
+    &:hover + label:after
+      cursor: pointer
     &:focus
       outline: none
     &:checked + label
       &:before
         background: #66F
-        box-shadow: none
+        box-shadow: none 
       &:after
         opacity: 1
-
+  label 
+    @media (max-width: 767px)
+      padding-top: -8px
 .primaryBtn
   display: flex
   align-items: center
